@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-4xl font-bold;
+    }
+
+    h2 {
+        @apply text-2xl font-bold;
+    }
+
+    h3 {
+        @apply text-xl font-bold;
+    }
+
+    .content h1,
+    .content h2,
+    .content h3,
+    .content p,
+    .content img {
+        @apply my-6;
+    }
+
+    .content ul {
+        @apply my-6 pl-5 list-disc;
+    }
+
+    .content ol {
+        @apply my-6 pl-5 list-decimal;
+    }
+
+    li {
+        @apply my-4 list-disc list-inside;
+    }
+
+    @media (min-width: 768px) {
+        h1 {
+            @apply text-6xl font-bold;
+        }
+
+        h2 {
+            @apply text-4xl font-bold;
+        }
+    }
+}
+
+/* Custom Utility Classes */
+.pl-1 {
+    padding-left: 1rem;
+}
+
+.pl-2 {
+    padding-left: 2rem;
+}
+
+.pl-3 {
+    padding-left: 3rem;
+}
+
+/* All <a> tags as hyperlinks */
+a {
+    color: #3b82f6; /* text-blue-500 */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2563eb; /* text-blue-600 */
+    text-decoration: none;
+}
+
+/* Exclude <a> tags within <h1>, <h2>, and <h3> from hyperlink styles */
+h1 a,
+h2 a,
+h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Specific rule for <a> tags within .pl-1, .pl-2, and .pl-3 */
+.pl-1 a,
+.pl-2 a,
+.pl-3 a {
+    color: #3b82f6; /* text-blue-500 */
+    text-decoration: none;
+}
+
+.pl-1 a:hover,
+.pl-2 a:hover,
+.pl-3 a:hover {
+    color: #2563eb; /* text-blue-600 */
+    text-decoration: none;
+}
+
+br {
+    display: block;
+    margin-top: 1rem;
+    content: "";
+    line-height: 1rem;
+}
